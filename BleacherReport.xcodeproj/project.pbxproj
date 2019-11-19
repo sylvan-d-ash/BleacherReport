@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		5EE82AAD23843A0C00456912 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE82AAC23843A0C00456912 /* AppDelegate.swift */; };
 		5EE82AAF23843A0C00456912 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE82AAE23843A0C00456912 /* SceneDelegate.swift */; };
-		5EE82AB123843A0C00456912 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE82AB023843A0C00456912 /* ViewController.swift */; };
 		5EE82AB423843A0C00456912 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE82AB223843A0C00456912 /* Main.storyboard */; };
 		5EE82AB623843A0D00456912 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EE82AB523843A0D00456912 /* Assets.xcassets */; };
 		5EE82AB923843A0D00456912 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE82AB723843A0D00456912 /* LaunchScreen.storyboard */; };
 		5EE82AC423843A0D00456912 /* BleacherReportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE82AC323843A0D00456912 /* BleacherReportTests.swift */; };
+		5EE82AD3238442A700456912 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE82AD2238442A700456912 /* WebService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +30,6 @@
 		5EE82AA923843A0C00456912 /* BleacherReport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BleacherReport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE82AAC23843A0C00456912 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EE82AAE23843A0C00456912 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5EE82AB023843A0C00456912 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5EE82AB323843A0C00456912 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5EE82AB523843A0D00456912 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EE82AB823843A0D00456912 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +37,7 @@
 		5EE82ABF23843A0D00456912 /* BleacherReportTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BleacherReportTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE82AC323843A0D00456912 /* BleacherReportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BleacherReportTests.swift; sourceTree = "<group>"; };
 		5EE82AC523843A0D00456912 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EE82AD2238442A700456912 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,12 +79,11 @@
 		5EE82AAB23843A0C00456912 /* BleacherReport */ = {
 			isa = PBXGroup;
 			children = (
-				5EE82AAC23843A0C00456912 /* AppDelegate.swift */,
-				5EE82AAE23843A0C00456912 /* SceneDelegate.swift */,
-				5EE82AB023843A0C00456912 /* ViewController.swift */,
+				5EE82AD12384429700456912 /* Web Services */,
+				5EE82AD023843F1300456912 /* Search */,
+				5EE82ACE23843EE600456912 /* App Delegate */,
+				5EE82ACF23843EFE00456912 /* Resources */,
 				5EE82AB223843A0C00456912 /* Main.storyboard */,
-				5EE82AB523843A0D00456912 /* Assets.xcassets */,
-				5EE82AB723843A0D00456912 /* LaunchScreen.storyboard */,
 				5EE82ABA23843A0D00456912 /* Info.plist */,
 			);
 			path = BleacherReport;
@@ -97,6 +96,39 @@
 				5EE82AC523843A0D00456912 /* Info.plist */,
 			);
 			path = BleacherReportTests;
+			sourceTree = "<group>";
+		};
+		5EE82ACE23843EE600456912 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				5EE82AAC23843A0C00456912 /* AppDelegate.swift */,
+				5EE82AAE23843A0C00456912 /* SceneDelegate.swift */,
+			);
+			path = "App Delegate";
+			sourceTree = "<group>";
+		};
+		5EE82ACF23843EFE00456912 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5EE82AB523843A0D00456912 /* Assets.xcassets */,
+				5EE82AB723843A0D00456912 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5EE82AD023843F1300456912 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		5EE82AD12384429700456912 /* Web Services */ = {
+			isa = PBXGroup;
+			children = (
+				5EE82AD2238442A700456912 /* WebService.swift */,
+			);
+			path = "Web Services";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,7 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EE82AB123843A0C00456912 /* ViewController.swift in Sources */,
+				5EE82AD3238442A700456912 /* WebService.swift in Sources */,
 				5EE82AAD23843A0C00456912 /* AppDelegate.swift in Sources */,
 				5EE82AAF23843A0C00456912 /* SceneDelegate.swift in Sources */,
 			);
