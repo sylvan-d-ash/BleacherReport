@@ -19,6 +19,7 @@ protocol PhotosPresenterProtocol: class {
     var numberOfItems: Int { get }
 
     func viewDidLoad()
+    func search(for text: String?)
     func didSelect(itemAt index: Int)
 }
 

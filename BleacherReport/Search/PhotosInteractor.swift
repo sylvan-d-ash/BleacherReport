@@ -10,32 +10,54 @@ import Foundation
 
 
 class PhotosInteractor: PhotosInteractorProtocol {
+
+    // MARK: - Init
+
     private let webService: WebServiceProtocol
 
     init(webService: WebServiceProtocol) {
         self.webService = webService
     }
 
+    // MARK: - Properties
+
+    private lazy var searchQueue: OperationQueue = {
+        var queue = OperationQueue()
+        queue.name = "Flickr Search Queue"
+        queue.maxConcurrentOperationCount = 1
+        return queue
+    }()
+
+    // MARK: - PhotosInteractorProtocol
+    
     func getPhotos(with searchText: String, completion: @escaping (Result<[FlickrPhoto], Error>) -> Void) {
 
-        // fetch photos
-        self.webService.search(for: searchText) { (result) in
+        // cancel any ongoing operations
+        self.searchQueue.cancelAllOperations()
 
-            switch result {
-            case .failure(let error):
-                completion(.failure(error))
+        // initiate new search operation
+        self.searchQueue.addOperation { [weak self] in
+            guard let `self` = self else { return }
 
-            case .success(let data):
-                do {
-                    // decode response
-                    let decoder = JSONDecoder()
-                    let response = try decoder.decode(FlickrResponseObject.self, from: data)
+            // fetch photos
+            self.webService.search(for: searchText) { (result) in
 
-                    // pass photos to completion
-                    completion(.success(response.info.photos))
-                }
-                catch {
+                switch result {
+                case .failure(let error):
                     completion(.failure(error))
+
+                case .success(let data):
+                    do {
+                        // decode response
+                        let decoder = JSONDecoder()
+                        let response = try decoder.decode(FlickrResponseObject.self, from: data)
+
+                        // pass photos to completion
+                        completion(.success(response.info.photos))
+                    }
+                    catch {
+                        completion(.failure(error))
+                    }
                 }
             }
         }
