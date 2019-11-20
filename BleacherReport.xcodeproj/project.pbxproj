@@ -21,6 +21,7 @@
 		5E52E80C238589B40016BC0A /* PhotosViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E52E80B238589B40016BC0A /* PhotosViewSpy.swift */; };
 		5E52E80E238589BD0016BC0A /* PhotosRouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E52E80D238589BD0016BC0A /* PhotosRouterSpy.swift */; };
 		5E52E81023858CFA0016BC0A /* NSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E52E80F23858CFA0016BC0A /* NSError.swift */; };
+		5E52E81323858EB10016BC0A /* PhotoCellSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E52E81223858EB10016BC0A /* PhotoCellSpy.swift */; };
 		5EE82AAD23843A0C00456912 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE82AAC23843A0C00456912 /* AppDelegate.swift */; };
 		5EE82AAF23843A0C00456912 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE82AAE23843A0C00456912 /* SceneDelegate.swift */; };
 		5EE82AB423843A0C00456912 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE82AB223843A0C00456912 /* Main.storyboard */; };
@@ -59,6 +60,7 @@
 		5E52E80D238589BD0016BC0A /* PhotosRouterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosRouterSpy.swift; sourceTree = "<group>"; };
 		5E52E80F23858CFA0016BC0A /* NSError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSError.swift; sourceTree = "<group>"; };
 		5E52E81123858E0E0016BC0A /* BleacherReportTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BleacherReportTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		5E52E81223858EB10016BC0A /* PhotoCellSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCellSpy.swift; sourceTree = "<group>"; };
 		5EE82AA923843A0C00456912 /* BleacherReport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BleacherReport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE82AAC23843A0C00456912 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EE82AAE23843A0C00456912 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				5E52E809238589AA0016BC0A /* PhotosInteractorStub.swift */,
 				5E52E80B238589B40016BC0A /* PhotosViewSpy.swift */,
 				5E52E80D238589BD0016BC0A /* PhotosRouterSpy.swift */,
+				5E52E81223858EB10016BC0A /* PhotoCellSpy.swift */,
 			);
 			path = "Test Doubles";
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 				5E52E807238589540016BC0A /* PhotosPresenterSpec.swift in Sources */,
 				5E52E80A238589AA0016BC0A /* PhotosInteractorStub.swift in Sources */,
 				5E52E80E238589BD0016BC0A /* PhotosRouterSpy.swift in Sources */,
+				5E52E81323858EB10016BC0A /* PhotoCellSpy.swift in Sources */,
 				5E52E80C238589B40016BC0A /* PhotosViewSpy.swift in Sources */,
 				5E52E81023858CFA0016BC0A /* NSError.swift in Sources */,
 			);

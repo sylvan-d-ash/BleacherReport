@@ -87,6 +87,49 @@ class PhotosPresenterSpec: QuickSpec {
                 }
             }
         }
+
+        describe("configure cell") {
+            it("should pass correct data to cell") {
+                // given
+                let index = 0
+                let photo = interactor.photos[index]
+                let imageURL = URL(string: "https://farm\(photo.farm).staticflickr.com/\(photo.server)/\(photo.id)_\(photo.secret)_t.jpg")!
+                let cell = PhotoCellSpy()
+                sut.search(for: "winter")
+
+                // when
+                sut.configure(cell, forRowAt: index)
+
+                // then
+                expect(cell.didCallDisplayTitle).to(equal(true))
+                expect(cell.title).to(equal(photo.title))
+                expect(cell.didCallDisplayImage).to(equal(true))
+                expect(cell.imageURL).to(equal(imageURL))
+            }
+        }
+
+        describe("didSelect") {
+            it("should open full preview for selected photo") {
+                // given
+                let index = 0
+                let photo = interactor.photos[index]
+                sut.search(for: "winter")
+
+                // when
+                sut.didSelect(itemAt: index)
+
+                // then
+                expect(router.didCallShowFullPreview).to(equal(true))
+                expect(router.photo).to(equal(photo))
+            }
+        }
     }
 
+}
+
+
+extension FlickrPhoto: Equatable {
+    public static func ==(lhs: FlickrPhoto, rhs: FlickrPhoto) -> Bool {
+        return (lhs.id == rhs.id) && (lhs.secret == rhs.secret)
+    }
 }
