@@ -53,7 +53,7 @@ class WebService: WebServiceProtocol {
         components.queryItems?.append(URLQueryItem(name: "api_key", value: "1508443e49213ff84d566777dc211f2a"))
         components.queryItems?.append(URLQueryItem(name: "method", value: "flickr.photos.search"))
         components.queryItems?.append(URLQueryItem(name: "text", value: "\(escapedSearchText)"))
-        components.queryItems?.append(URLQueryItem(name: "per_page", value: "20"))
+        components.queryItems?.append(URLQueryItem(name: "per_page", value: "25"))
         components.queryItems?.append(URLQueryItem(name: "format", value: "json"))
         components.queryItems?.append(URLQueryItem(name: "nojsoncallback", value: "1"))
 
