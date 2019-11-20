@@ -44,7 +44,9 @@ class PhotosInteractor: PhotosInteractorProtocol {
 
                 switch result {
                 case .failure(let error):
-                    completion(.failure(error))
+                    DispatchQueue.main.async {
+                        completion(.failure(error))
+                    }
 
                 case .success(let data):
                     do {
@@ -52,11 +54,15 @@ class PhotosInteractor: PhotosInteractorProtocol {
                         let decoder = JSONDecoder()
                         let response = try decoder.decode(FlickrResponseObject.self, from: data)
 
-                        // pass photos to completion
-                        completion(.success(response.info.photos))
+                        DispatchQueue.main.async {
+                            // pass photos to completion
+                            completion(.success(response.info.photos))
+                        }
                     }
                     catch {
-                        completion(.failure(error))
+                        DispatchQueue.main.async {
+                            completion(.failure(error))
+                        }
                     }
                 }
             }

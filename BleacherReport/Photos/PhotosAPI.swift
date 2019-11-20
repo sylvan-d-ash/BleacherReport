@@ -12,6 +12,8 @@ import Foundation
 protocol PhotosViewProtocol: class {
     func showLoader()
     func hideLoader()
+    func showError(title: String, message: String?)
+    func reloadView()
 }
 
 
@@ -20,6 +22,7 @@ protocol PhotosPresenterProtocol: class {
 
     func viewDidLoad()
     func search(for text: String?)
+    func configure(_ cell: PhotoCellProtocol, forRowAt index: Int)
     func didSelect(itemAt index: Int)
 }
 
