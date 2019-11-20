@@ -62,8 +62,8 @@ class PhotosPresenter: PhotosPresenterProtocol {
         cell.display(title: photo.title)
 
         // get url
-        let size = "thumbnail"
-        guard let url = URL(string: "https://farm\(photo.farm).staticflickr.com/\(photo.server)/\(photo.id)_\(photo.secret)_\(size).jpg") else { return }
+        let sizeThumbnail = "t"
+        guard let url = URL(string: "https://farm\(photo.farm).staticflickr.com/\(photo.server)/\(photo.id)_\(photo.secret)_\(sizeThumbnail).jpg") else { return }
         cell.display(image: url)
     }
 

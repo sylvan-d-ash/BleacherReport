@@ -6,6 +6,7 @@
 //  Copyright © 2019 Sylvan Ash. All rights reserved.
 //
 
+import Kingfisher
 import UIKit
 
 
@@ -25,8 +26,14 @@ class PhotoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // photo title
         self.titleLabel.text = photo.title
-        // TODO: add kingfisher
+
+        // photo image
+        let sizeThumbnail = "b"
+        guard let url = URL(string: "https://farm\(photo.farm).staticflickr.com/\(photo.server)/\(photo.id)_\(photo.secret)_\(sizeThumbnail).jpg") else { return }
+        self.photoImageView.kf.indicatorType = .activity
+        self.photoImageView.kf.setImage(with: url)
     }
 
     // MARK: - IBActions

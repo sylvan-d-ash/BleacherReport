@@ -6,6 +6,7 @@
 //  Copyright © 2019 Sylvan Ash. All rights reserved.
 //
 
+import Kingfisher
 import UIKit
 
 
@@ -27,7 +28,7 @@ extension PhotoCell: PhotoCellProtocol {
     }
 
     func display(image imageURL: URL) {
-        // TODO: add kingfisher
-        print(imageURL)
+        self.thumbnailImageView.kf.indicatorType = .activity
+        self.thumbnailImageView.kf.setImage(with: imageURL)
     }
 }
