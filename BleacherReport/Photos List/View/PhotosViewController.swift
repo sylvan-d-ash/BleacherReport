@@ -100,6 +100,7 @@ extension PhotosViewController: UITableViewDataSource {
 
 extension PhotosViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.dismiss(animated: true, completion: nil)
         self.presenter.didSelect(itemAt: indexPath.row)
     }
 }

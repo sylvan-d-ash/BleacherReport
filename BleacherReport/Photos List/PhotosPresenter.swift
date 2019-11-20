@@ -15,10 +15,12 @@ class PhotosPresenter: PhotosPresenterProtocol {
 
     private var view: PhotosViewProtocol?
     private let interactor: PhotosInteractorProtocol
+    private let router: PhotosRouterProtocol
 
-    init(_ view: PhotosViewProtocol, _ interactor: PhotosInteractorProtocol) {
+    init(_ view: PhotosViewProtocol, _ interactor: PhotosInteractorProtocol, _ router: PhotosRouterProtocol) {
         self.view = view
         self.interactor = interactor
+        self.router = router
     }
 
     // MARK: - Properties
@@ -66,6 +68,7 @@ class PhotosPresenter: PhotosPresenterProtocol {
     }
 
     func didSelect(itemAt index: Int) {
-        //
+        let photo = self.photos[index]
+        self.router.showFullPreview(for: photo)
     }
 }

@@ -9,6 +9,8 @@
 import Foundation
 
 
+// MARK: - PhotosViewProtocol
+
 protocol PhotosViewProtocol: class {
     func showLoader()
     func hideLoader()
@@ -16,6 +18,8 @@ protocol PhotosViewProtocol: class {
     func reloadView()
 }
 
+
+// MARK: - PhotosPresenterProtocol
 
 protocol PhotosPresenterProtocol: class {
     var numberOfItems: Int { get }
@@ -26,6 +30,15 @@ protocol PhotosPresenterProtocol: class {
 }
 
 
+// MARK: - PhotosInteractorProtocol
+
 protocol PhotosInteractorProtocol {
     func getPhotos(with searchText: String, completion: @escaping (Result<[FlickrPhoto], Error>) -> Void)
+}
+
+
+// MARK: - PhotosRouterProtocol
+
+protocol PhotosRouterProtocol {
+    func showFullPreview(for photo: FlickrPhoto)
 }
