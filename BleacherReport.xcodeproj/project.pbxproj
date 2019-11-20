@@ -104,7 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				5EE82AD12384429700456912 /* Web Services */,
-				5EE82AD023843F1300456912 /* Photos */,
+				5EE82AD023843F1300456912 /* Photos List */,
 				5EE82ACE23843EE600456912 /* App Delegate */,
 				5EE82ACF23843EFE00456912 /* Resources */,
 				5EE82ABA23843A0D00456912 /* Info.plist */,
@@ -139,7 +139,7 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		5EE82AD023843F1300456912 /* Photos */ = {
+		5EE82AD023843F1300456912 /* Photos List */ = {
 			isa = PBXGroup;
 			children = (
 				5E2350B12385485300A8E560 /* View */,
@@ -149,7 +149,7 @@
 				5E2350AF23852E7B00A8E560 /* PhotosConfig.swift */,
 				5E2350AB238527A700A8E560 /* PhotosInteractor.swift */,
 			);
-			path = Photos;
+			path = "Photos List";
 			sourceTree = "<group>";
 		};
 		5EE82AD12384429700456912 /* Web Services */ = {
