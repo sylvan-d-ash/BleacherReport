@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,12 +16,16 @@
 		5E52E7FF23857BFD0016BC0A /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E52E7FE23857BFD0016BC0A /* PhotoViewController.swift */; };
 		5E52E80123857CEA0016BC0A /* Photo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E52E80023857CEA0016BC0A /* Photo.storyboard */; };
 		5E52E80323857DD00016BC0A /* PhotosRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E52E80223857DD00016BC0A /* PhotosRouter.swift */; };
+		5E52E807238589540016BC0A /* PhotosPresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E52E806238589540016BC0A /* PhotosPresenterSpec.swift */; };
+		5E52E80A238589AA0016BC0A /* PhotosInteractorStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E52E809238589AA0016BC0A /* PhotosInteractorStub.swift */; };
+		5E52E80C238589B40016BC0A /* PhotosViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E52E80B238589B40016BC0A /* PhotosViewSpy.swift */; };
+		5E52E80E238589BD0016BC0A /* PhotosRouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E52E80D238589BD0016BC0A /* PhotosRouterSpy.swift */; };
+		5E52E81023858CFA0016BC0A /* NSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E52E80F23858CFA0016BC0A /* NSError.swift */; };
 		5EE82AAD23843A0C00456912 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE82AAC23843A0C00456912 /* AppDelegate.swift */; };
 		5EE82AAF23843A0C00456912 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE82AAE23843A0C00456912 /* SceneDelegate.swift */; };
 		5EE82AB423843A0C00456912 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE82AB223843A0C00456912 /* Main.storyboard */; };
 		5EE82AB623843A0D00456912 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EE82AB523843A0D00456912 /* Assets.xcassets */; };
 		5EE82AB923843A0D00456912 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE82AB723843A0D00456912 /* LaunchScreen.storyboard */; };
-		5EE82AC423843A0D00456912 /* BleacherReportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE82AC323843A0D00456912 /* BleacherReportTests.swift */; };
 		5EE82AD3238442A700456912 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE82AD2238442A700456912 /* WebService.swift */; };
 		5EE82AD523845F5F00456912 /* FlickrPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE82AD423845F5F00456912 /* FlickrPhoto.swift */; };
 		61F73F6E3E675D1DF2A664E4 /* Pods_BleacherReport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8385BDED0BF5B478E6EDE034 /* Pods_BleacherReport.framework */; };
@@ -49,6 +53,12 @@
 		5E52E7FE23857BFD0016BC0A /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		5E52E80023857CEA0016BC0A /* Photo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Photo.storyboard; sourceTree = "<group>"; };
 		5E52E80223857DD00016BC0A /* PhotosRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosRouter.swift; sourceTree = "<group>"; };
+		5E52E806238589540016BC0A /* PhotosPresenterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosPresenterSpec.swift; sourceTree = "<group>"; };
+		5E52E809238589AA0016BC0A /* PhotosInteractorStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosInteractorStub.swift; sourceTree = "<group>"; };
+		5E52E80B238589B40016BC0A /* PhotosViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewSpy.swift; sourceTree = "<group>"; };
+		5E52E80D238589BD0016BC0A /* PhotosRouterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosRouterSpy.swift; sourceTree = "<group>"; };
+		5E52E80F23858CFA0016BC0A /* NSError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSError.swift; sourceTree = "<group>"; };
+		5E52E81123858E0E0016BC0A /* BleacherReportTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BleacherReportTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		5EE82AA923843A0C00456912 /* BleacherReport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BleacherReport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE82AAC23843A0C00456912 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EE82AAE23843A0C00456912 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,7 +67,6 @@
 		5EE82AB823843A0D00456912 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5EE82ABA23843A0D00456912 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EE82ABF23843A0D00456912 /* BleacherReportTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BleacherReportTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5EE82AC323843A0D00456912 /* BleacherReportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BleacherReportTests.swift; sourceTree = "<group>"; };
 		5EE82AC523843A0D00456912 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EE82AD2238442A700456912 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		5EE82AD423845F5F00456912 /* FlickrPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrPhoto.swift; sourceTree = "<group>"; };
@@ -107,6 +116,26 @@
 			path = Photo;
 			sourceTree = "<group>";
 		};
+		5E52E8042385890F0016BC0A /* PhotosList */ = {
+			isa = PBXGroup;
+			children = (
+				5E52E81123858E0E0016BC0A /* BleacherReportTests-Bridging-Header.h */,
+				5E52E808238589970016BC0A /* Test Doubles */,
+				5E52E806238589540016BC0A /* PhotosPresenterSpec.swift */,
+			);
+			path = PhotosList;
+			sourceTree = "<group>";
+		};
+		5E52E808238589970016BC0A /* Test Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				5E52E809238589AA0016BC0A /* PhotosInteractorStub.swift */,
+				5E52E80B238589B40016BC0A /* PhotosViewSpy.swift */,
+				5E52E80D238589BD0016BC0A /* PhotosRouterSpy.swift */,
+			);
+			path = "Test Doubles";
+			sourceTree = "<group>";
+		};
 		5EE82AA023843A0C00456912 = {
 			isa = PBXGroup;
 			children = (
@@ -143,8 +172,9 @@
 		5EE82AC223843A0D00456912 /* BleacherReportTests */ = {
 			isa = PBXGroup;
 			children = (
-				5EE82AC323843A0D00456912 /* BleacherReportTests.swift */,
+				5E52E8042385890F0016BC0A /* PhotosList */,
 				5EE82AC523843A0D00456912 /* Info.plist */,
+				5E52E80F23858CFA0016BC0A /* NSError.swift */,
 			);
 			path = BleacherReportTests;
 			sourceTree = "<group>";
@@ -197,7 +227,6 @@
 				84BE6290B59C18F138CAEAB8 /* Pods-BleacherReportTests.debug.xcconfig */,
 				F08148341FE5FE130E9D0BBB /* Pods-BleacherReportTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -240,6 +269,7 @@
 				5EE82ABB23843A0D00456912 /* Sources */,
 				5EE82ABC23843A0D00456912 /* Frameworks */,
 				5EE82ABD23843A0D00456912 /* Resources */,
+				68ED4AEAC98471CC2FB3C40B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -266,6 +296,7 @@
 					};
 					5EE82ABE23843A0D00456912 = {
 						CreatedOnToolsVersion = 11.2;
+						LastSwiftMigration = 1120;
 						TestTargetID = 5EE82AA823843A0C00456912;
 					};
 				};
@@ -333,6 +364,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		68ED4AEAC98471CC2FB3C40B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BleacherReportTests/Pods-BleacherReportTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BleacherReportTests/Pods-BleacherReportTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BleacherReportTests/Pods-BleacherReportTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A23A5514654D8201F8E7A5BC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -398,7 +446,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EE82AC423843A0D00456912 /* BleacherReportTests.swift in Sources */,
+				5E52E807238589540016BC0A /* PhotosPresenterSpec.swift in Sources */,
+				5E52E80A238589AA0016BC0A /* PhotosInteractorStub.swift in Sources */,
+				5E52E80E238589BD0016BC0A /* PhotosRouterSpy.swift in Sources */,
+				5E52E80C238589B40016BC0A /* PhotosViewSpy.swift in Sources */,
+				5E52E81023858CFA0016BC0A /* NSError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +640,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BleacherReportTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
@@ -598,6 +651,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.daitensai.BleacherReportTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BleacherReportTests/PhotosList/BleacherReportTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BleacherReport.app/BleacherReport";
@@ -610,6 +665,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BleacherReportTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
@@ -620,6 +676,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.daitensai.BleacherReportTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BleacherReportTests/PhotosList/BleacherReportTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BleacherReport.app/BleacherReport";
