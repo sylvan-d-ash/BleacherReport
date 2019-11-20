@@ -14,6 +14,7 @@ class PhotosViewController: UIViewController {
     // MARK: - Properties
 
     var presenter: PhotosPresenterProtocol!
+    var searchController: UISearchController!
 
     // MARK: - IBOutlets
 
@@ -29,9 +30,7 @@ class PhotosViewController: UIViewController {
 
         // setup views
         self.setupTableView()
-
-        // test search process
-        self.presenter.viewDidLoad()
+        self.setupSearchController()
     }
 
     // MARK: - Setup
@@ -39,6 +38,17 @@ class PhotosViewController: UIViewController {
     private func setupTableView() {
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        self.tableView.tableFooterView = UIView()
+    }
+
+    private func setupSearchController() {
+        let controller = UISearchController(searchResultsController: nil)
+        controller.searchResultsUpdater = self
+        controller.obscuresBackgroundDuringPresentation = false
+        controller.searchBar.sizeToFit()
+
+        self.tableView.tableHeaderView = controller.searchBar
+        self.searchController = controller
     }
 }
 
@@ -91,5 +101,13 @@ extension PhotosViewController: UITableViewDataSource {
 extension PhotosViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.presenter.didSelect(itemAt: indexPath.row)
+    }
+}
+
+
+extension PhotosViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchText = searchController.searchBar.text
+        self.presenter.search(for: searchText)
     }
 }

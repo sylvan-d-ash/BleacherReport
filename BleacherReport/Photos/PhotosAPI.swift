@@ -20,7 +20,6 @@ protocol PhotosViewProtocol: class {
 protocol PhotosPresenterProtocol: class {
     var numberOfItems: Int { get }
 
-    func viewDidLoad()
     func search(for text: String?)
     func configure(_ cell: PhotoCellProtocol, forRowAt index: Int)
     func didSelect(itemAt index: Int)

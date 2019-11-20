@@ -29,21 +29,6 @@ class PhotosPresenter: PhotosPresenterProtocol {
 
     var numberOfItems: Int { return self.photos.count }
 
-    func viewDidLoad() {
-        self.interactor.getPhotos(with: "winter") { (result) in
-            switch result {
-            case .failure(let error):
-                print(error.localizedDescription)
-                self.view?.showError(title: "Error getting images", message: error.localizedDescription)
-
-            case .success(let photos):
-                self.photos = photos
-                print(photos)
-                self.view?.reloadView()
-            }
-        }
-    }
-
     func search(for text: String?) {
 
         guard let text = text else {
@@ -60,10 +45,11 @@ class PhotosPresenter: PhotosPresenterProtocol {
             switch result {
             case .failure(let error):
                 print(error.localizedDescription)
+                self.view?.showError(title: "Error getting images", message: error.localizedDescription)
 
             case .success(let photos):
                 self.photos = photos
-                print(photos)
+                self.view?.reloadView()
             }
         }
     }
